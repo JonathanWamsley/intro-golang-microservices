@@ -2,7 +2,7 @@ package utils
 
 import "github.com/gin-gonic/gin"
 
-func Respond(c *gin.Context ,status int, body interface{}) {
+func Respond(c *gin.Context, status int, body interface{}) {
 	if c.GetHeader("Accept") == "appliaction/xml" {
 		c.XML(status, body)
 		return
@@ -10,7 +10,7 @@ func Respond(c *gin.Context ,status int, body interface{}) {
 	c.JSON(status, body)
 }
 
-func RespondError(c *gin.Context , err *ApplicationError) {
+func RespondError(c *gin.Context, err *ApplicationError) {
 	if c.GetHeader("Accept") == "appliaction/xml" {
 		c.XML(err.StatusCode, err)
 		return

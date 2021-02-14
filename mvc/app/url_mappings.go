@@ -1,7 +1,6 @@
 package app
 
 import (
-
 	"github.com/JonathanWamsley/courses/federico/intro-golang-microservices/mvc/controllers"
 )
 
